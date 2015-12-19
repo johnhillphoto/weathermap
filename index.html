@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
+      <link href="style.css" rel='stylesheet'>
+  </head>
+  <body>
+  	<div class="page-header">
+      <h1>Travel Weather Planner<small style ="color:rgba(255,255,255,0.7);">&nbsp&nbsp  by John and Tom</small></h1>
+      <h2>See weather for each city/day of your trip.</h2>
+      <h3><h3>
+    </div>
+    <div id="blockofEntry">
+
+       <container id="citiesanddates">
+            <div id="entry1" class="entryPack">
+              <label for='city1' class="cityPrompt"> Enter Starting City </label> 
+                <span class="name_date_group">
+                  <input type='text' id='city1' class="inputBox" name='city1' placeholder="Enter start city" onFocus="geolocate(autocomplete)"> 
+                  <input type="date" id="date1" value="2015-12-18"><span class="dateLabel">Enter Date</span>
+                 </span> 
+            </div>  
+       </container>
+
+    <div class="buttonFormat">
+          <button type="button" value="Submit" onclick='addAnotherCity()' id="waypointAdd"  class="btn btn-success btn-lg">Add a waypoint city!</button><br><br>
+          <button type="button" value="Submit" id="weatherButton" class="btn btn-success btn-lg">Get your weather map!</button>
+          </div>
+    </div>
+
+ <container id="citiesanddatesSource">
+    <span>
+        <div id="entry2" class="entryPack">
+          <label for='cityN' class="cityPrompt"> Enter Waypoint City </label>
+            <span class="name_date_group">
+          <input type='text' id='city2' class="inputBox" name='city2' placeholder="Enter waypoint city" onFocus="geolocate(autocomplete2)"> 
+          <input type="date" id="date2" value="2015-12-19"><span class="dateLabel" id="dateLabelN">Enter Date</span>
+            </span>
+        </div>
+
+        <div id="entry3" class="entryPack">
+          <label for='cityN' class="cityPrompt"> Enter Waypoint City </label>
+            <span class="name_date_group">
+          <input type='text' id='city3' class="inputBox" name='city3' placeholder="Enter waypoint city"> 
+          <input type="date" id="date3" value="2015-12-20"><span class="dateLabel" id="dateLabelN">Enter Date</span>
+            </span>
+        </div>
+
+        <div id="entry4" class="entryPack">
+          <label for='cityN' class="cityPrompt"> Enter Waypoint City </label>
+            <span class="name_date_group">
+          <input type='text' id='city4' class="inputBox" name='city4' placeholder="Enter waypoint city"> 
+          <input type="date" id="date4" value="2015-12-21"><span class="dateLabel" id="dateLabelN">Enter Date</span>
+            </span>
+        </div>
+
+        <div id="entry5" class="entryPack">
+          <label for='cityN' class="cityPrompt"> Enter Waypoint City </label>
+            <span class="name_date_group">
+          <input type='text' id='city5' class="inputBox" name='city5' placeholder="Enter waypoint city"> 
+          <input type="date" id="date5" value="2015-12-22"><span class="dateLabel" id="dateLabelN">Enter Date</span>
+            </span>
+        </div>
+
+        <div id="entry6" class="entryPack">
+          <label for='cityN' class="cityPrompt"> Enter Waypoint City </label>
+            <span class="name_date_group">
+          <input type='text' id='city6' class="inputBox" name='city6' placeholder="Enter waypoint city"> 
+          <input type="date" id="date6" value="2015-12-23"><span class="dateLabel" id="dateLabelN">Enter Date</span>
+            </span>
+        </div>
+
+        <div id="entry7" class="entryPack">
+          <label for='cityN' class="cityPrompt"> Enter Waypoint City </label>
+            <span class="name_date_group">
+          <input type='text' id='city7' class="inputBox" name='city7' placeholder="Enter waypoint city"> 
+          <input type="date" id="date7" value="2015-12-24"><span class="dateLabel" id="dateLabelN">Enter Date</span>
+            </span>
+        </div>
+
+         <div id="entry8" class="entryPack">
+          <label for='cityN' class="cityPrompt"> Enter Waypoint City </label>
+            <span class="name_date_group">
+          <input type='text' id='city8' name='city8' placeholder="Enter waypoint city"> 
+          <input type="date" id="date8" class="inputBox" value="2015-12-25"><span class="dateLabel" id="dateLabelN">Enter Date</span>
+            </span>
+        </div>
+
+         <div id="entry9" class="entryPack">
+          <label for='cityN' class="cityPrompt"> Enter Waypoint City </label>
+            <span class="name_date_group">
+          <input type='text' id='city9' class="inputBox" name='city9' placeholder="Enter waypoint city"> 
+          <input type="date" id="date9" value="2015-12-26"><span class="dateLabel" id="dateLabelN">Enter Date</span>
+            </span>
+        </div>
+
+         <div id="entry10" class="entryPack">
+          <label for='cityN' class="cityPrompt"> Enter Waypoint City </label>
+            <span class="name_date_group">
+          <input type='text' id='city10' class="inputBox" name='city10' placeholder="Enter waypoint city"> 
+          <input type="date" id="date10" value="2015-12-27"><span class="dateLabel" id="dateLabelN">Enter Date</span>
+            </span>
+        </div>
+
+    </span>       
+ </container> 
+    <div id="map">
+    </div>
+  </body>
+    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyD0l9toPD-4LOQvZbCINi2xiJkXdxGD1nU&signed_in=true&libraries=places"></script>
+    <script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js'></script>
+    <script src='jquery.lightbox_me.js'></script>
+    <script src='JSON_Calls_Parsing.js'></script>
+    <script src='lightbox_launch.js'></script>
+    <script src='Map_Marker_Formatting.js'></script>
+    <script src='autocomplete_scripts.js'></script>
+</html>
+

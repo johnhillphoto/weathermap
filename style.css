@@ -1,0 +1,131 @@
+html, body {
+  height: 100%;
+  margin: 0;
+  padding: 0;
+  background: url(clouds-20120607-IMG_0305-2.jpg) no-repeat center center fixed;
+  background-size: cover;
+}
+
+#citiesanddatesSource {
+    visibility:hidden;
+}
+
+#citiesanddates{
+  background-color: white;
+}
+#blockofEntry{
+  background-color: rgba(255,255,255,0.8);
+  width:70%;
+  height:auto;
+  font-size: 1.4em;
+  border-radius: 20px;
+  padding:20px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+#map {
+  height: 90%;
+  width: 90%;
+  position: relative;
+  left:50px;
+  padding-left: 50px;
+  padding-right: 50px;
+  visibility: hidden
+}
+
+#entry1{
+  padding-top: 15px
+}
+.inputBox{
+  width:310px;
+}
+.entryN{
+  padding-top: 15px
+}
+.dateLabel{
+  padding-left: 15px
+}
+.entryPack{
+  padding-top:20px;
+}
+.name_date_group{
+  position: absolute;
+  left:34%;
+}
+.buttonFormat{
+  position: relative;
+  padding: 0px;
+  padding-top: 20px;
+  width: 25%;
+  margin: 0 auto;
+}
+.btn{
+  width:230px;
+  margin: 0 auto;
+
+}
+.cityPrompt{
+  margin:0px;
+  padding-left: 19px
+}
+
+
+/*new styling*/
+.jumbotron{
+	width: 350px;
+	height: 250px;
+	border-radius: 12px;
+    background: url("clouds-20120607-IMG_0305.jpg");
+    background-size: cover;
+    padding: 8px;
+    padding-left: 3px;
+    padding-right: 3px;
+    padding-bottom: 3px
+}
+.flex_container {
+	padding-left: 20px;
+	padding-right:20px;
+    display: flex;
+  justify-content: space-between;
+}
+.flex_column {
+	padding-left: 20px;
+	padding-right:20px;
+    display: flex;
+    flex-direction:column;
+  justify-content: space-between;
+  align-items:center;
+}
+
+item{
+	font-weight: 800;
+	font-size: 1.8em
+}
+#second{
+	font-size: .8em
+}
+#third{
+	padding-top: 15px
+}
+.desc{
+	font-size: 1.4em;
+	text-align: center;
+	padding-top: 15px
+}
+.page-header{
+	color:white;
+	padding-left: 50px;
+  background-color: rgba(0,0,0,0.3);
+}
+
+#testPop{
+	visibility: hidden;
+}
+#ourNames{
+  color:white;
+}
+
+#entry2{
+  visibility: hidden;
+}
