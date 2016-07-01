@@ -2,7 +2,7 @@ html, body {
   height: 100%;
   margin: 0;
   padding: 0;
-  background: url(clouds-20120607-IMG_0305-2.jpg) no-repeat center center fixed;
+  background: url(images/clouds-20120607-IMG_0305-2.jpg) no-repeat center center fixed;
   background-size: cover;
 }
 
@@ -76,7 +76,7 @@ html, body {
 	width: 350px;
 	height: 250px;
 	border-radius: 12px;
-    background: url("clouds-20120607-IMG_0305.jpg");
+    background: url("images/clouds-20120607-IMG_0305.jpg");
     background-size: cover;
     padding: 8px;
     padding-left: 3px;

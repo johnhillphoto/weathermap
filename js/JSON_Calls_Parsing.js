@@ -42,10 +42,10 @@ function addAnotherCity(){
         wayPointNumber:wayPointCount,
         populated:false
   }//end newVariables object
-    weatherObject.push(newData);   
+    weatherObject.push(newData);
 } //addAnotherCity Function
 
-function getWeather(callback){  
+function getWeather(callback){
     weatherObject.forEach(function(weatherObItem) {
 
     var cityID=weatherObItem.cityField;
@@ -55,10 +55,10 @@ function getWeather(callback){
 
     $.ajax( {
 		//get data from JSON feed
-        url : "https://api.worldweatheronline.com/premium/v1/weather.ashx?q="+cityName+"&format=json&num_of_days=0&date="+dateRtv+"&cc=no&mca=no&fx24=no&includelocation=yes&tp=12&key=daac9f08772c06b4f36e9810e8896",
+        url : "https://api.worldweatheronline.com/premium/v1/weather.ashx?q="+cityName+"&format=json&num_of_days=0&date="+dateRtv+"&cc=no&mca=no&fx24=no&includelocation=yes&tp=12&key="+weatherKey,
 		dataType : "jsonp",
-		success : function(parsed_json) {  
-  //put parsed data into weatherObject for each city          
+		success : function(parsed_json) {
+  //put parsed data into weatherObject for each city
         weatherObItem.city = parsed_json.data.nearest_area[0].areaName[0].value;
         weatherObItem.date = parsed_json.data.weather[0].date;
         weatherObItem.cityLat = parsed_json.data.nearest_area[0].latitude;
@@ -73,7 +73,7 @@ function getWeather(callback){
         callback();
 		}
     });// end ajax success request
-       
+
     });//end foreach loop
     }//end getWeather function
 

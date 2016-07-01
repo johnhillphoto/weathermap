@@ -17,9 +17,11 @@ function processDate(date){
   var dateArray=date.split("-");
   var monthNum = Number(dateArray[1]);
   var month=(monthNames[monthNum-1]);
-      if(dateArray[2][0] === "0"){
-        dateArray[2]=dateArray[2][1];     
-      }//end if
+  // if(dateArray[2][0] !== undefined){
+    if(dateArray[2][0] === "0"){
+      dateArray[2]=dateArray[2][1];
+    }//end if
+  // }//end outer if
   var builtDate = month + dateArray[2];
   return builtDate;
 }//end function
@@ -31,13 +33,13 @@ function initMap() {
   map = new google.maps.Map(document.getElementById('map'), {
     center: {lat: 40.720029, lng: -74.006936},
     zoom: 5
-  });    
+  });
 }//end initMap function
 
 $(function() {
-    
+
     initMap();
-                   
+
 });//end ready function
 
 //this blank array is ready to receive lat & long coordinates for each city to create the red polyline
@@ -50,14 +52,14 @@ function createMapStuff(){
                 "position": {lat: Number(arrayElement.cityLat), lng: Number(arrayElement.citLong)},
                 map: map,
                 icon: customIcon
-          }); //end google.maps function call   
+          }); //end google.maps function call
 
-        //build an object of coordinates for polyline         
-        var latLongObject = {lat: Number(arrayElement.cityLat), lng: Number(arrayElement.citLong)};             
+        //build an object of coordinates for polyline
+        var latLongObject = {lat: Number(arrayElement.cityLat), lng: Number(arrayElement.citLong)};
         flightPlanCoordinates.push(latLongObject);
 
         //build html to put inside each Infowindow
-        var contentString = 
+        var contentString =
         '<div class="jumbotron">'+
             '<container class="flex_container" id="first">'+
             '<item>'+
@@ -99,7 +101,7 @@ function createMapStuff(){
 
 
               var infowindow = new google.maps.InfoWindow({
-        content:contentString 
+        content:contentString
         });
 
 
@@ -108,9 +110,9 @@ function createMapStuff(){
       //make each infowindow open with click
       google.maps.event.addListener(marker, 'click', function () {
       infowindow.open(map, marker);
-      });  
+      });
 
-     
+
     });//end foreach loop
 
   //create red polyline, and set onto map
@@ -131,7 +133,7 @@ for (var i=1;i<flightPlanCoordinates.length;i++){
   var lat = flightPlanCoordinates[i].lat;
   var lng = flightPlanCoordinates[i].lng;
   bounds.extend(new google.maps.LatLng(lat, lng));
-  }//end if 
+  }//end if
 
 } //end for loop
 
